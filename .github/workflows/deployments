@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: GitHub actions demo
+name: GitHub actions with deployment demo
 
 # Controls when the workflow will run
 on:
@@ -50,14 +50,14 @@ jobs:
   deployStaging:
     needs: build
     runs-on: ubuntu-latest
-    environment: staging
+    environment: Staging
     
     steps:
       - run: echo Deploy to Staging!
   deployProd:
     needs: deployStaging
     runs-on: ubuntu-latest
-    environment: production
+    environment: Production
     
     steps:
       - run: echo Deploy to Production!
